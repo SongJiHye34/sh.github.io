@@ -1,0 +1,1434 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Mans MALL</title>
+    <link rel="stylesheet" href="css/themansmall.css">
+    <link rel="icon" href="img/M.jpg">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+    <link rel="stylesheet" href="themansshop.html">
+    <script src="js/aos.js"></script>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="js/themansmall.js"></script>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="header">
+            <div class="nanb">
+                <ul>
+                    <li>
+                        <p>THE MANS MALL</p>
+                    </li>
+                </ul>
+                <ul>
+                    <li><a href="#">
+                            <span class="material-symbols-outlined">
+                                delivery_truck_speed
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="material-symbols-outlined">
+                                add_shopping_cart
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="material-symbols-outlined">
+                                man_2
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" id="menuBtn">
+                            <span class="material-symbols-outlined">
+                                apps
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+
+            </div>
+            <div class="themans" id="mainMenuWrap">
+
+                <div class="menu" id="mainMenuBtn">
+                    <ul class="position">
+                        <li id="line-1"></li>
+                        <li class="list"><a href="#">NEW</a></li>
+                        <li class="list"><a href="#">BEST</a></li>
+                        <li class="list"><a href="#">SALE</a></li>
+                        <li id="line-2"></li>
+                        <li class="list"><a href="#">아우터</a></li>
+                        <li class="list"><a href="themansshop-top.html">상의</a></li>
+                        <li class="list"><a href="themansshop-pants.html">하의</a></li>
+                        <li class="list"><a href="#">신발</a></li>
+                        <li class="list"><a href="#">ACC</a></li>
+                        <li class="list"><a href="#">헬스&트레이닝</a></li>
+                    </ul>
+                </div>
+
+            </div>
+            <div class="top-banner">
+                <section class="mp4">
+                    <video autoplay muted loop playsinline>
+                        <source src="img/5359136-uhd_3840_2160_24fps.mp4" type="video/mp4">
+                    </video>
+                </section>
+                <div class="logo">
+                    <ul>
+                        <li><img src="img/Union (1).png" alt="logo"></li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+        <div class="menu-overlay" id="menuOverlay"></div>
+
+        <aside class="side-menu" id="sideMenu">
+            <button class="close-btn" id="closeBtn">✕</button>
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="검색어를 입력하세요">
+                <button class="search-btn">
+                    <span class="material-symbols-outlined">
+                        search
+                    </span>
+                </button>
+            </div>
+            <ul id="itemList">
+                <strong>추천 검색어</strong>
+                <li class="item">정장</li>
+                <li class="item">셔츠</li>
+                <li class="item">구두</li>
+                <li class="item">자켓</li>
+                <li class="item">가방</li>
+            </ul>
+            <ul id="sianup">
+                <li><a href="#">로그인</a></li>
+                <li><a href="#">회원가입</a></li>
+                <li><a href="#">배송상황</a></li>
+                <li><a href="#">장바구니</a></li>
+            </ul>
+            <ul id="sale">
+                <li><a href="#">이벤트</a></li>
+                <li><a href="#">매장안내</a></li>
+                <li><a href="#">공지사항</a></li>
+                <li><a href="#">멤버십</a></li>
+            </ul>
+        </aside>
+
+        <div class="text-input-box" id="text-input-box"></div>
+
+        <aside class="input-box" id="input-Box">
+            <div class="input">
+                <ul>
+                    <strong>NEW <span class="material-symbols-outlined">
+                            maps_ugc
+                        </span></strong>
+                    <li style="margin-top: 20px;"><a href="#" style="font-weight: 400; color: #ff7c7c;">계절상품</a></li>
+                    <li><a href="#" style="font-weight: 400; color: #ff7c7c;">추천</a></li>
+
+                </ul>
+                <ul>
+                    <strong>BEST <span class="material-symbols-outlined">
+                            award_star
+                        </span></strong>
+                    <li style="margin-top: 20px;"><a href="#" style="font-weight: 500; ">TOP100</a></li>
+                </ul>
+                <ul>
+                    <strong>SALE <span class="material-symbols-outlined">
+                            percent_discount
+                        </span></strong>
+
+                    <li style="margin-top: 20px;"><a href="#" style="font-weight: 400; color: #ff7c7c;">할인</a></li>
+                    <li><a href="#" style="font-weight: 400; color: #ff7c7c;">1+1</a></li>
+                </ul>
+                <ul id="interval"></ul>
+                <ul>
+                    <strong>아우터</strong>
+
+                    <li style="margin-top: 20px;"><a href="#">코트 & 재킷</a></li>
+                    <li><a href="#">점퍼</a></li>
+                    <li><a href="#">아우터</a></li>
+                </ul>
+                <ul>
+                    <strong>상의</strong>
+                    <li style="margin-top: 20px;"><a href="themansshop-top.html">카라티셔츠 & 셔츠</a></li>
+                    <li><a href="themansshop-top.html">맨투맨 & 티셔츠</a></li>
+                </ul>
+                <ul>
+                    <strong>하의</strong>
+                    <li style="margin-top: 20px;"><a href="themansshop-pants.html">정장 팬츠</a></li>
+                    <li><a href="themansshop-pants.html">캐주얼 팬츠</a></li>
+                    <li><a href="themansshop-pants.html">반바지</a></li>
+                </ul>
+                <ul>
+                    <strong>신발</strong>
+                    <li style="margin-top: 20px;"><a href="#">구두</a></li>
+                    <li><a href="#">운동화</a></li>
+                    <li><a href="#">샌들</a></li>
+                    <li><a href="#">레인부츠</a></li>
+                </ul>
+                <ul>
+                    <strong>ACC</strong>
+                    <li style="margin-top: 20px;"><a href="#">모자</a></li>
+                    <li><a href="#">가방</a></li>
+                    <li><a href="#">패션 잡화</a></li>
+                </ul>
+                <ul>
+                    <strong>헬스&트레이닝</strong>
+                    <li style="margin-top: 20px;"><a href="#">상의</a></li>
+                    <li><a href="#">하의</a></li>
+                    <li><a href="#">세트</a></li>
+                    <li><a href="#">보조장비</a></li>
+                </ul>
+            </div>
+        </aside>
+        <div class="a-item">
+            <div class="a-banner"><img src="img/ben-hershey-ZmV395PJMXg-unsplash.png" alt="">
+                <ul>
+                    <li><span style="display: block; font-size: 40px;line-height: 20px; text-align: center;">Thinking
+                            About</span>
+                        <br>
+                        <span style="display: block; font-weight: 400; font-size: 14px; line-height: 20px;">유연하고 가벼운 액티브
+                            팬츠로 자연스러운 움직임과 일상적인 편안함을 제공합니다</span>
+                    </li>
+                </ul>
+
+            </div>
+            <div class="a-title">
+                <ul>
+                    <li><a href="#">구매하기</a></li>
+                    <li><a href="#">자세히 보기</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="content">
+            <div class="a-item">
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+
+                        <div class="swiper-slide">
+                            <div class="card">
+                                <img src="img/img1.jpg" alt="1">
+                                <a href="#" class="buy-btn">구매하기</a>
+                                <ul>
+                                    <li>
+                                        <a href="#">
+                                            <span style="display: block; font-size: 27px;">엠디가 선택한</span>
+                                            <span style=" font-size: 27px; ">트레이닝복</span>
+                                            <span style="font-size: 12px; line-height: 10px; padding-left: 30px;">──
+                                                제논데일리레깅스</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="card">
+                                <img src="img/img2.jpg" alt="2">
+                                <a href="#"  class="buy-btn">구매하기</a>
+                                <ul>
+                                    <li>
+                                        <a href="#">
+                                            <span style="display: block; font-size: 27px; ">8시간 활동해도</span>
+                                            <span style=" font-size: 27px; ">땀에 젖지않는</span>
+                                            <span style="font-size: 12px; line-height: 10px; padding-left: 30px;">──
+                                                숏팬츠</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="card">
+                                <img src="img/img3.jpg" alt="3">
+                                <a href="#"  class="buy-btn">구매하기</a>
+                                <ul>
+                                    <li>
+                                        <a href="#">
+                                            <span style="display: block; font-size: 27px;">자외선을 90%</span>
+                                            <span style=" font-size: 27px; ">차단</span>
+                                            <span style="font-size: 12px; line-height: 10px; padding-left: 110px;">──
+                                                루즈핏 팬츠</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="card">
+                                <img src="img/img4.jpg" alt="4">
+                               <a href="#"  class="buy-btn">구매하기</a>
+                                <ul>
+                                    <li>
+                                        <a href="#">
+                                            <span style="display: block; font-size: 27px;">인플루언서 극찬</span>
+                                            <span style=" font-size: 27px; ">아이템</span>
+                                            <span style="font-size: 12px; line-height: 10px; padding-left: 30px;">──
+                                                스윙기능성반팔티</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="card">
+                                <img src="img/img5.jpg" alt="5">
+                                <a href="#"  class="buy-btn">구매하기</a>
+                                <ul>
+                                    <li>
+                                        <a href="#">
+                                            <span style="display: block; font-size: 27px;">두가지 컬러로</span>
+                                            <span style=" font-size: 27px; ">더 세련되게</span>
+                                            <span style="font-size: 12px; line-height: 10px; padding-left: 40px;">──
+                                                기능성셋업</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="card">
+                                <img src="img/img6.jpg" alt="6">
+                                <a href="#"  class="buy-btn">구매하기</a>
+                                <ul>
+                                    <li>
+                                        <a href="#">
+                                            <span style="display: block; font-size: 27px;">히트텍 내장</span>
+                                            <span style=" font-size: 27px; ">트레이닝복</span>
+                                            <span style="font-size: 12px; line-height: 10px; padding-left: 30px;">── 슬림
+                                                머슬핏</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="card">
+                                <img src="img/img7.jpg" alt="7">
+                               <a href="#"  class="buy-btn">구매하기</a>
+                                <ul>
+                                    <li>
+                                        <a href="#">
+                                            <span style="display: block; font-size: 27px;">완판후 5차</span>
+                                            <span style=" font-size: 27px; ">재입고</span>
+                                            <span style="font-size: 12px; line-height: 10px; padding-left: 100px;">── 쇼츠
+                                                레깅스</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="card"> <a href="#">
+                               <img src="img/img8.jpg" alt="8" style="opacity: 80%;"> 
+                            </a>
+                                
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="swiper-scrollbar main-scrollbar"></div>
+            </div>
+
+        </div>
+
+        <div class="b-item">
+            <div class="high">
+                <ul style="left: 50px; position: relative;">
+                    <li>
+                        <h3 style="line-height: 20px; font-size: 23px; margin-bottom: 5px; ">Loosen Up With The Mans.
+                        </h3>
+                        <p style="line-height:20px; font-size:17px; ">더 맨 몰만의 데일리룩</p>
+                        <br>
+                    </li>
+                </ul>
+            </div>
+            <div class="mainpage">
+                <div class="wrapimg">
+                    <img src="img/main.jpg" alt="back">
+                </div>
+                <div class="bnr2">
+                    <div class="bnr2-track">
+                        <div class="bnr2-slide"><img src="img/img9.png" alt="9"></div>
+                        <div class="bnr2-slide"><img src="img/img10.png" alt="10"></div>
+                        <div class="bnr2-slide"><img src="img/img11.png" alt="11"></div>
+                    </div>
+
+                    <button class="bnr2-btn prev">&lt;</button>
+                    <button class="bnr2-btn next">&gt;</button>
+                </div>
+            </div>
+            <div class="going">
+                <ul>
+                    <li><span style="font-size: 23px; line-height: 20px; font-weight: 400;">상위상품 TOP100</span></li>
+                    <li><a href="#">
+                            <p>자세히 보기</p>
+                            <span class="material-symbols-outlined">
+                                add_circle
+                            </span>
+                        </a></li>
+
+                </ul>
+            </div>
+            <div class="Guide">
+                <div class="sub-track">
+                    <div class="sub-slide">
+                        <div>
+                            <ul id="sub-color">
+                                <li class="screen"><img src="img/img12.jpg" alt="12"></li>
+                            </ul>
+                            <ul class="talk">
+                                <li><a href="#">매일매일맨투맨</a></li>
+                                <li>
+                                    <a href="#">
+                                        <p style="text-decoration: line-through; line-height: 20px; font-size: 14px;">
+                                            99,000원</p>
+                                        <p style="font-weight: 300; font-size: 14px;">42,000원</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div>
+                            <ul id="sub-color">
+                                <li class="screen"><img src="img/img13.jpg" alt="13"></li>
+                            </ul>
+                            <ul class="talk">
+                                <li>
+                                    <a href="#">
+                                        슬림밴딩슬랙스
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <p style="text-decoration: line-through; line-height: 20px; font-size: 14px;">
+                                            87,000원</p>
+                                        <p style="font-weight: 300; font-size: 14px;">39,000원</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div>
+                            <ul id="sub-color">
+                                <li class="screen"><img src="img/img14.jpg" alt="14"></li>
+                            </ul>
+                            <ul class="talk">
+                                <li>
+                                    <a href="#">
+                                        노틱라이트스포츠볼캡
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <p style="text-decoration: line-through; line-height: 20px; font-size: 14px;">
+                                            39,000원</p>
+                                        <p style="font-weight: 300; font-size: 14px;">19,000원</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="sub-slide">
+                        <div>
+                            <ul id="sub-color">
+                                <li class="screen">
+                                    <img src="img/img15.jpg" alt="15">
+                                </li>
+                            </ul>
+                            <ul class="talk">
+                                <li>
+                                    <a href="#">
+                                        메리트데일리포켓남방
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <p style="text-decoration: line-through; line-height: 20px; font-size: 14px;">
+                                            89,000원</p>
+                                        <p style="font-weight: 300; font-size: 14px;">29,000원</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div>
+                            <ul id="sub-color">
+                                <li class="screen">
+                                    <img src="img/img16.jpg" alt="16">
+                                </li>
+                            </ul>
+                            <ul class="talk">
+                                <li>
+                                    <a href="#">
+                                        브래노조거팬츠
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <p style="text-decoration: line-through; line-height: 20px; font-size: 14px;">
+                                            99,000원</p>
+                                        <p style="font-weight: 300; font-size: 14px;">39,000원</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                    </div>
+                    <div class="sub-slide">
+                        <div>
+                            <ul id="sub-color">
+                                <li class="screen">
+                                    <img src="img/img17.jpg" alt="17">
+                                </li>
+                            </ul>
+                            <ul class="talk">
+                                <li>
+                                    <a href="#">
+                                        더블포켓가죽점퍼
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <p style="text-decoration: line-through; line-height: 20px; font-size: 14px;">
+                                            169,000원</p>
+                                        <p style="font-weight: 300; font-size: 14px;">59,000원</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div>
+                            <ul id="sub-color">
+                                <li class="screen">
+                                    <img src="img/img18.jpg" alt="18">
+                                </li>
+                            </ul>
+                            <ul class="talk">
+                                <li>
+                                    <a href="#">
+                                        하버빈티지체크자켓
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <p style="text-decoration: line-through; line-height: 20px; font-size: 14px;">
+                                            129,000원</p>
+                                        <p style="font-weight: 300;font-size: 14px;">65,000원</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div>
+                            <ul id="sub-color">
+                                <li class="screen">
+                                    <img src="img/img19.jpg" alt="19">
+                                </li>
+                            </ul>
+                            <ul class="talk">
+                                <li>
+                                    <a href="#">
+                                        구제워싱청바지
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <p style="text-decoration: line-through; line-height: 20px; font-size: 14px;">
+                                            99,000원</p>
+                                        <p style="font-weight: 300; font-size: 14px;">49,000원</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="c-item">
+            <div class="c-title">
+                <ul style="left: 50px; position: relative;">
+                    <li>
+                        <h3 style="line-height: 20px; font-size: 23px; margin-bottom: 5px; ">📢EVENT</h3>
+                        <p style="line-height:20px; font-size:17px; ">오늘의 이벤트 몰아서 보기</p>
+                    </li>
+                    <li><img src="img/txtlogo.png" alt="txtlogo"></li>
+                </ul>
+            </div>
+            <div class="core">
+                <div class="bigimg">
+                    <ul>
+                        <li><img src="img/Group4.jpg" alt="g4"></li>
+                    </ul>
+                </div>
+                <div class="channel">
+                    <div class="frame">
+                        <ul>
+                            <li>
+                                <a href="#">
+                                    <img src="img/banner1.jpg" alt="banner">
+                                    <strong>#겨울,가을 에디션정리 할인이벤트</strong>
+                                </a>
+                            </li>
+                        </ul>
+
+                    </div>
+                    <div class="frame">
+                        <ul>
+                            <li>
+                                <a href="#">
+                                    <img src="img/banner2.jpg" alt="banner">
+                                    <strong>#더맨즈몰 채널 지금 들어가기</strong>
+                                </a>
+
+                            </li>
+                        </ul>
+
+                    </div>
+                    <div class="frame">
+                        <ul>
+                            <li>
+                                <a href="#">
+                                    <img src="img/banner3.jpg" alt="3">
+                                    <strong>#택배배송 무료 알아보기</strong>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="popupbar">
+                <div class="popupmenu">
+                    <ul>
+                        <li><img src="img/Vector1.jpg" alt="Vector"></li>
+                        <li>
+                            <p style="font-size: 19px; font-weight: 400;">전 상품 무료배송</p>
+                            <p style="font-size: 12px; font-weight: 300;">10만원 이상 구매 시</p>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li><img src="img/Vector2.jpg" alt="Vector"></li>
+                        <li>
+                            <p style="font-size: 19px; font-weight: 400;">신상 최대 80% 할인</p>
+                            <p style="font-size: 12px; font-weight: 300;">2026년 컬랙션 특별 혜택</p>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li><img src="img/Vector3.jpg" alt="Vector"></li>
+                        <li>
+                            <p style="font-size: 19px; font-weight: 400;">친구 추가 시 쿠폰 혜택</p>
+                            <p style="font-size: 12px; font-weight: 300;">다양한 이벤트와 혜택 안내</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="d-item">
+            <div class="d-title">
+                <ul style="left: 50px; position: relative;">
+                    <li>
+                        <h3 style="line-height: 20px; font-size: 23px; margin-bottom: 5px; ">NEW ARRIVAL🔥</h3>
+                        <p style="line-height:20px; font-size:17px; ">선선한 봄 날씨, 피크닉 옷을 골라보아요.</p>
+                        <br>
+                    </li>
+                </ul>
+            </div>
+            <div class="pink-btn">
+                <div class="tab-item" style="cursor: auto;">
+                    <button type="button" class="tab-link click">
+                        <span>아우터</span>
+                    </button>
+                </div>
+                <div class="tab-item" style="cursor: auto;">
+                    <button type="button" class="tab-link click">
+                        <span>니트/티셔츠</span>
+                    </button>
+                </div>
+                <div class="tab-item" style="cursor: auto;">
+                    <button type="button" class="tab-link click">
+                        <span>블라우스/셔츠</span>
+                    </button>
+                </div>
+            </div>
+            <div class="link-web">
+                <div class="active">
+                    <div class="A-link">
+                        <div class="swiper productSwiperA">
+                            <div class="swiper-wrapper">
+
+                                <div class="swiper-slide">
+                                    <div class="closet">
+                                        <div class="closet-item"><a href="#">
+                                                <div class="closet-img">
+                                                    <img src="img/NEW1.jpg" alt="1">
+                                                </div>
+                                                <div class="text-box">
+                                                    <span class="name">모릭 사이드라인 트랙자켓</span>
+                                                    <span class="price">
+                                                        <p
+                                                            style="text-decoration: line-through; color: #888; font-weight: 300;">
+                                                            85,000</p> 39,000
+                                                    </span>
+                                                </div>
+                                            </a>
+                                            <button class="toggle" style="border: none; outline: none;">
+                                                <span class="material-symbols-outlined">
+                                                    heart_plus
+                                                </span>
+                                            </button>
+                                        </div>
+                                        <div class="closet-item"><a href="#">
+                                                <div class="closet-img">
+                                                    <img src="img/NEW2.jpg" alt="1">
+                                                </div>
+                                                <div class="text-box">
+                                                    <span class="name">워터워싱 카모패턴자켓</span>
+                                                    <span class="price">
+                                                        <p
+                                                            style="text-decoration: line-through; color: #888; font-weight: 300;">
+                                                            95,000</p>39,000
+                                                    </span>
+                                                </div>
+                                            </a>
+                                            <button class="toggle" style="border: none; outline: none;">
+                                                <span class="material-symbols-outlined">
+                                                    heart_plus
+                                                </span>
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="closet">
+                                        <div class="closet-item"><a href="#">
+                                                <div class="closet-img">
+                                                    <img src="img/NEW3.jpg" alt="3">
+                                                </div>
+                                                <div class="text-box">
+                                                    <span class="name">로브베이직 항공점퍼</span>
+                                                    <span class="price">
+                                                        <p
+                                                            style="text-decoration: line-through; color: #888; font-weight: 300;">
+                                                            143,000</p>59,000
+                                                    </span>
+                                                </div>
+                                            </a>
+                                            <button class="toggle" style="border: none; outline: none; ">
+                                                <span class="material-symbols-outlined">
+                                                    heart_plus
+                                                </span>
+                                            </button>
+                                        </div>
+                                        <div class="closet-item"><a href="#">
+                                                <div class="closet-img">
+                                                    <img src="img/NEW4.jpg" alt="4">
+                                                </div>
+                                                <div class="text-box">
+                                                    <span class="name">라이트테크 후드자켓</span>
+                                                    <span class="price">
+                                                        <p
+                                                            style="text-decoration: line-through; color: #888; font-weight: 300;">
+                                                            88,000</p>49,000
+                                                    </span>
+                                                </div>
+                                            </a>
+                                            <button class="toggle" style="border: none; outline: none; ">
+                                                <span class="material-symbols-outlined">
+                                                    heart_plus
+                                                </span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="closet">
+                                        <div class="closet-item"><a href="#">
+                                                <div class="closet-img">
+                                                    <img src="img/NEW5.jpg" alt="5">
+                                                </div>
+                                                <div class="text-box">
+                                                    <span class="name">다이아퀼팅 베이직블루종</span>
+                                                    <span class="price">
+                                                        <p
+                                                            style="text-decoration: line-through; color: #888; font-weight: 300;">
+                                                            142,000</p>55,000
+                                                    </span>
+                                                </div>
+                                            </a>
+                                            <button class="toggle" style="border: none; outline: none; ">
+                                                <span class="material-symbols-outlined">
+                                                    heart_plus
+                                                </span>
+                                            </button>
+                                        </div>
+                                        <div class="closet-item"><a href="#">
+                                                <div class="closet-img">
+                                                    <img src="img/NEW6.jpg" alt="6">
+                                                </div>
+                                                <div class="text-box">
+                                                    <span class="name">컨트라스트 스티치자켓</span>
+                                                    <span class="price">
+                                                        <p
+                                                            style="text-decoration: line-through; color: #888; font-weight: 300;">
+                                                            85,000</p>45,000
+                                                    </span>
+                                                </div>
+                                            </a>
+                                            <button class="toggle" style="border: none; outline: none; ">
+                                                <span class="material-symbols-outlined">
+                                                    heart_plus
+                                                </span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="closet">
+                                        <div class="closet-item"><a href="#">
+                                                <div class="closet-img">
+                                                    <img src="img/NEW7.jpg" alt="7">
+                                                </div>
+                                                <div class="text-box">
+                                                    <span class="name">빈티지 하이넥집업</span>
+                                                    <span class="price">
+                                                        <p
+                                                            style="text-decoration: line-through; color: #888; font-weight: 300;">
+                                                            123,000</p>75,000
+                                                    </span>
+                                                </div>
+                                            </a>
+                                            <button class="toggle" style="border: none; outline: none;">
+                                                <span class="material-symbols-outlined">
+                                                    heart_plus
+                                                </span>
+                                            </button>
+                                        </div>
+                                        <div class="closet-item"><a href="#">
+                                                <div class="closet-img">
+                                                    <img src="img/NEW8.jpg" alt="8">
+                                                </div>
+                                                <div class="text-box">
+                                                    <span class="name">카이썸머 윈드브레이커</span>
+                                                    <span class="price">
+                                                        <p
+                                                            style="text-decoration: line-through; color: #888; font-weight: 300;">
+                                                            95,000</p>45,000
+                                                    </span>
+                                                </div>
+                                            </a>
+                                            <button class="toggle" style="border: none; outline: none; ">
+                                                <span class="material-symbols-outlined">
+                                                    heart_plus
+                                                </span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="closet">
+                                        <div class="closet-item"><a href="#">
+                                                <div class="closet-img">
+                                                    <img src="img/NEW9.jpg" alt="9">
+                                                </div>
+                                                <div class="text-box">
+                                                    <span class="name">리브온 빈티지워크 데님자켓</span>
+                                                    <span class="price">
+                                                        <p
+                                                            style="text-decoration: line-through; color: #888; font-weight: 300;">
+                                                            125,000</p>49,000
+                                                    </span>
+                                                </div>
+                                            </a>
+                                            <button class="toggle" style="border: none; outline: none;">
+                                                <span class="material-symbols-outlined">
+                                                    heart_plus
+                                                </span>
+                                            </button>
+                                        </div>
+                                        <div class="closet-item"><a href="#">
+                                                <div class="closet-img">
+                                                    <img src="img/NEW10.jpg" alt="10">
+                                                </div>
+                                                <div class="text-box">
+                                                    <span class="name">클래식더블트렌치코트</span>
+                                                    <span class="price">
+                                                        <p
+                                                            style="text-decoration: line-through; color: #888; font-weight: 300;">
+                                                            159,000</p>75,000
+                                                    </span>
+                                                </div>
+                                            </a>
+                                            <button class="toggle" style="border: none; outline: none; ">
+                                                <span class="material-symbols-outlined">
+                                                    heart_plus
+                                                </span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="A-prev">&#10094;</div>
+                            <div class="A-next">&#10095;</div>
+                        </div>
+                        <div class="swiper-scrollbar A-scrollbar"></div>
+                    </div>
+                    <div class="B-link">
+                        <div class="swiper productSwiperB">
+                            <div class="swiper-wrapper">
+
+                                <div class="swiper-slide">
+                                    <div class="closet">
+                                        <div class="closet-item"><a href="#">
+                                                <div class="closet-img">
+                                                    <img src="img/sweater1.jpg" alt="s">
+                                                </div>
+                                                <div class="text-box">
+                                                    <span class="name">브렌꽈배기반팔니트</span>
+                                                    <span class="price">
+                                                        <p
+                                                            style="text-decoration: line-through; color: #888; font-weight: 300;">
+                                                            78,000</p> 	29,000
+                                                    </span>
+                                                </div>
+                                            </a>
+                                            <button class="toggle" style="border: none; outline: none;">
+                                                <span class="material-symbols-outlined">
+                                                    heart_plus
+                                                </span>
+                                            </button>
+                                        </div>
+                                        <div class="closet-item"><a href="#">
+                                                <div class="closet-img">
+                                                    <img src="img/sweater2.jpg" alt="s">
+                                                </div>
+                                                <div class="text-box">
+                                                    <span class="name">마이크로와플반팔니트</span>
+                                                    <span class="price">
+                                                        <p
+                                                            style="text-decoration: line-through; color: #888; font-weight: 300;">
+                                                            73,000</p>29,000
+                                                    </span>
+                                                </div>
+                                            </a>
+                                            <button class="toggle" style="border: none; outline: none;">
+                                                <span class="material-symbols-outlined">
+                                                    heart_plus
+                                                </span>
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="closet">
+                                        <div class="closet-item"><a href="#">
+                                                <div class="closet-img">
+                                                    <img src="img/sweater3.jpg" alt="s">
+                                                </div>
+                                                <div class="text-box">
+                                                    <span class="name">스티치포인트니트베스트</span>
+                                                    <span class="price">
+                                                        <p
+                                                            style="text-decoration: line-through; color: #888; font-weight: 300;">
+                                                            	85,000</p>	45,000
+                                                    </span>
+                                                </div>
+                                            </a>
+                                            <button class="toggle" style="border: none; outline: none; ">
+                                                <span class="material-symbols-outlined">
+                                                    heart_plus
+                                                </span>
+                                            </button>
+                                        </div>
+                                        <div class="closet-item"><a href="#">
+                                                <div class="closet-img">
+                                                    <img src="img/sweater4.jpg" alt="s">
+                                                </div>
+                                                <div class="text-box">
+                                                    <span class="name">코브트랙니트집업</span>
+                                                    <span class="price">
+                                                        <p
+                                                            style="text-decoration: line-through; color: #888; font-weight: 300;">
+                                                            115,000</p>55,000
+                                                    </span>
+                                                </div>
+                                            </a>
+                                            <button class="toggle" style="border: none; outline: none; ">
+                                                <span class="material-symbols-outlined">
+                                                    heart_plus
+                                                </span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="closet">
+                                        <div class="closet-item"><a href="#">
+                                                <div class="closet-img">
+                                                    <img src="img/sweater5.jpg" alt="s">
+                                                </div>
+                                                <div class="text-box">
+                                                    <span class="name">볼륨케이블집업니트</span>
+                                                    <span class="price">
+                                                        <p
+                                                            style="text-decoration: line-through; color: #888; font-weight: 300;">
+                                                            99,000</p>39,000
+                                                    </span>
+                                                </div>
+                                            </a>
+                                            <button class="toggle" style="border: none; outline: none; ">
+                                                <span class="material-symbols-outlined">
+                                                    heart_plus
+                                                </span>
+                                            </button>
+                                        </div>
+                                        <div class="closet-item"><a href="#">
+                                                <div class="closet-img">
+                                                    <img src="img/tshirt1.jpg" alt="t">
+                                                </div>
+                                                <div class="text-box">
+                                                    <span class="name">모비레터링티셔츠</span>
+                                                    <span class="price">
+                                                        <p
+                                                            style="text-decoration: line-through; color: #888; font-weight: 300;">
+                                                            79,000</p>29,000
+                                                    </span>
+                                                </div>
+                                            </a>
+                                            <button class="toggle" style="border: none; outline: none; ">
+                                                <span class="material-symbols-outlined">
+                                                    heart_plus
+                                                </span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="closet">
+                                        <div class="closet-item"><a href="#">
+                                                <div class="closet-img">
+                                                    <img src="img/tshirt2.jpg" alt="t">
+                                                </div>
+                                                <div class="text-box">
+                                                    <span class="name">에런긴팔티셔츠</span>
+                                                    <span class="price">
+                                                        <p
+                                                            style="text-decoration: line-through; color: #888; font-weight: 300;">
+                                                            79,000</p>29,000
+                                                    </span>
+                                                </div>
+                                            </a>
+                                            <button class="toggle" style="border: none; outline: none;">
+                                                <span class="material-symbols-outlined">
+                                                    heart_plus
+                                                </span>
+                                            </button>
+                                        </div>
+                                        <div class="closet-item"><a href="#">
+                                                <div class="closet-img">
+                                                    <img src="img/tshirt3.jpg" alt="t">
+                                                </div>
+                                                <div class="text-box">
+                                                    <span class="name">펠릭반팔티셔츠</span>
+                                                    <span class="price">
+                                                        <p
+                                                            style="text-decoration: line-through; color: #888; font-weight: 300;">
+                                                            89,000</p>42,000
+                                                    </span>
+                                                </div>
+                                            </a>
+                                            <button class="toggle" style="border: none; outline: none; ">
+                                                <span class="material-symbols-outlined">
+                                                    heart_plus
+                                                </span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="closet">
+                                        <div class="closet-item"><a href="#">
+                                                <div class="closet-img">
+                                                    <img src="img/tshirt4.jpg" alt="t">
+                                                </div>
+                                                <div class="text-box">
+                                                    <span class="name">포멀단가라티셔츠</span>
+                                                    <span class="price">
+                                                        <p
+                                                            style="text-decoration: line-through; color: #888; font-weight: 300;">
+                                                            65,000</p>29,000
+                                                    </span>
+                                                </div>
+                                            </a>
+                                            <button class="toggle" style="border: none; outline: none;">
+                                                <span class="material-symbols-outlined">
+                                                    heart_plus
+                                                </span>
+                                            </button>
+                                        </div>
+                                        <div class="closet-item"><a href="#">
+                                                <div class="closet-img">
+                                                    <img src="img/tshirt5.jpg" alt="t">
+                                                </div>
+                                                <div class="text-box">
+                                                    <span class="name">찰랑기능성티셔츠</span>
+                                                    <span class="price">
+                                                        <p
+                                                            style="text-decoration: line-through; color: #888; font-weight: 300;">
+                                                            89,000</p>39,000
+                                                    </span>
+                                                </div>
+                                            </a>
+                                            <button class="toggle" style="border: none; outline: none; ">
+                                                <span class="material-symbols-outlined">
+                                                    heart_plus
+                                                </span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="B-prev">&#10094;</div>
+                            <div class="B-next">&#10095;</div>
+                        </div>
+                        <div class="swiper-scrollbar B-scrollbar"></div>
+                    </div>
+                    <div class="C-link">
+                        <div class="swiper productSwiperC">
+                            <div class="swiper-wrapper">
+
+                                <div class="swiper-slide">
+                                    <div class="closet">
+                                        <div class="closet-item"><a href="#">
+                                                <div class="closet-img">
+                                                    <img src="img/shirt1.jpg" alt="st">
+                                                </div>
+                                                <div class="text-box">
+                                                    <span class="name">크릭모던넥타이셔츠</span>
+                                                    <span class="price">
+                                                        <p
+                                                            style="text-decoration: line-through; color: #888; font-weight: 300;">
+                                                            109,000</p>45,000
+                                                    </span>
+                                                </div>
+                                            </a>
+                                            <button class="toggle" style="border: none; outline: none;">
+                                                <span class="material-symbols-outlined">
+                                                    heart_plus
+                                                </span>
+                                            </button>
+                                        </div>
+                                        <div class="closet-item"><a href="#">
+                                                <div class="closet-img">
+                                                    <img src="img/shirt2.jpg" alt="st">
+                                                </div>
+                                                <div class="text-box">
+                                                    <span class="name">지오메트릭패턴셔츠자켓</span>
+                                                    <span class="price">
+                                                        <p
+                                                            style="text-decoration: line-through; color: #888; font-weight: 300;">
+                                                            129,000</p>59,000
+                                                    </span>
+                                                </div>
+                                            </a>
+                                            <button class="toggle" style="border: none; outline: none;">
+                                                <span class="material-symbols-outlined">
+                                                    heart_plus
+                                                </span>
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="closet">
+                                        <div class="closet-item"><a href="#">
+                                                <div class="closet-img">
+                                                    <img src="img/shirt3.jpg" alt="st">
+                                                </div>
+                                                <div class="text-box">
+                                                    <span class="name">루트카라티셔츠</span>
+                                                    <span class="price">
+                                                        <p
+                                                            style="text-decoration: line-through; color: #888; font-weight: 300;">
+                                                        99,000</p>39,000
+                                                    </span>
+                                                </div>
+                                            </a>
+                                            <button class="toggle" style="border: none; outline: none; ">
+                                                <span class="material-symbols-outlined">
+                                                    heart_plus
+                                                </span>
+                                            </button>
+                                        </div>
+                                        <div class="closet-item"><a href="#">
+                                                <div class="closet-img">
+                                                    <img src="img/shirt4.jpg" alt="st">
+                                                </div>
+                                                <div class="text-box">
+                                                    <span class="name">크래그셔츠맨투맨</span>
+                                                    <span class="price">
+                                                        <p
+                                                            style="text-decoration: line-through; color: #888; font-weight: 300;">
+                                                            99,000</p>39,000
+                                                    </span>
+                                                </div>
+                                            </a>
+                                            <button class="toggle" style="border: none; outline: none; ">
+                                                <span class="material-symbols-outlined">
+                                                    heart_plus
+                                                </span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="closet">
+                                        <div class="closet-item"><a href="#">
+                                                <div class="closet-img">
+                                                    <img src="img/shirt5.jpg" alt="st">
+                                                </div>
+                                                <div class="text-box">
+                                                    <span class="name">로던단가라포인셔츠</span>
+                                                    <span class="price">
+                                                        <p
+                                                            style="text-decoration: line-through; color: #888; font-weight: 300;">
+                                                            99,000</p>38,000
+                                                    </span>
+                                                </div>
+                                            </a>
+                                            <button class="toggle" style="border: none; outline: none; ">
+                                                <span class="material-symbols-outlined">
+                                                    heart_plus
+                                                </span>
+                                            </button>
+                                        </div>
+                                        <div class="closet-item"><a href="#">
+                                                <div class="closet-img">
+                                                    <img src="img/shirt6.jpg" alt="st">
+                                                </div>
+                                                <div class="text-box">
+                                                    <span class="name">오렉스클리어셔츠</span>
+                                                    <span class="price">
+                                                        <p
+                                                            style="text-decoration: line-through; color: #888; font-weight: 300;">
+                                                            139,000</p>59,000
+                                                    </span>
+                                                </div>
+                                            </a>
+                                            <button class="toggle" style="border: none; outline: none; ">
+                                                <span class="material-symbols-outlined">
+                                                    heart_plus
+                                                </span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="closet">
+                                        <div class="closet-item"><a href="#">
+                                                <div class="closet-img">
+                                                    <img src="img/shirt7.jpg" alt="st">
+                                                </div>
+                                                <div class="text-box">
+                                                    <span class="name">아르코반팔셔츠</span>
+                                                    <span class="price">
+                                                        <p
+                                                            style="text-decoration: line-through; color: #888; font-weight: 300;">
+                                                            89,000</p>39,000
+                                                    </span>
+                                                </div>
+                                            </a>
+                                            <button class="toggle" style="border: none; outline: none;">
+                                                <span class="material-symbols-outlined">
+                                                    heart_plus
+                                                </span>
+                                            </button>
+                                        </div>
+                                        <div class="closet-item"><a href="#">
+                                                <div class="closet-img">
+                                                    <img src="img/shirt8.jpg" alt="st">
+                                                </div>
+                                                <div class="text-box">
+                                                    <span class="name">스트라펀칭반팔셔츠</span>
+                                                    <span class="price">
+                                                        <p
+                                                            style="text-decoration: line-through; color: #888; font-weight: 300;">
+                                                            139,000</p>69,000
+                                                    </span>
+                                                </div>
+                                            </a>
+                                            <button class="toggle" style="border: none; outline: none; ">
+                                                <span class="material-symbols-outlined">
+                                                    heart_plus
+                                                </span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="closet">
+                                        <div class="closet-item"><a href="#">
+                                                <div class="closet-img">
+                                                    <img src="img/shirt9.jpg" alt="st">
+                                                </div>
+                                                <div class="text-box">
+                                                    <span class="name">아르코반팔셔츠</span>
+                                                    <span class="price">
+                                                        <p
+                                                            style="text-decoration: line-through; color: #888; font-weight: 300;">
+                                                            89,000</p>39,000
+                                                    </span>
+                                                </div>
+                                            </a>
+                                            <button class="toggle" style="border: none; outline: none;">
+                                                <span class="material-symbols-outlined">
+                                                    heart_plus
+                                                </span>
+                                            </button>
+                                        </div>
+                                        <div class="closet-item"><a href="#">
+                                                <div class="closet-img">
+                                                    <img src="img/shirt10.jpg" alt="st">
+                                                </div>
+                                                <div class="text-box">
+                                                    <span class="name">글로시라이트셔츠</span>
+                                                    <span class="price">
+                                                        <p
+                                                            style="text-decoration: line-through; color: #888; font-weight: 300;">
+                                                            99,000</p>49,000
+                                                    </span>
+                                                </div>
+                                            </a>
+                                            <button class="toggle" style="border: none; outline: none; ">
+                                                <span class="material-symbols-outlined">
+                                                    heart_plus
+                                                </span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="C-prev">&#10094;</div>
+                            <div class="C-next">&#10095;</div>
+                        </div>
+                        <div class="swiper-scrollbar C-scrollbar"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="last">
+            <div class="Assist">
+                <ul>
+                    <li><a href="#"><img src="img/Frame.jpg" alt="Frame"><span>REVIWE</span></a></li>
+                    <li><a href="#"><img src="img/Frame2.jpg" alt="Frame"><span>INSTAGRAM</span></a></li>
+                    <li><a href="#"><img src="img/kakao.png" alt="kakao"><span>카카오톡으로 상품 문의하기</span></a></li>
+                </ul>
+            </div>
+            <div class="connector">
+                <div class="number">
+                    <ul>
+                        <li><span>032-2960-021</span></li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <span>Am 10:00 ~ PM 06:00 (LCNCH PM 12:00 ~ PM 13:00)</span>
+                            <span>SAT, SUN. HOLIDAY OFF</span>
+                        </li>
+                        <li style="text-decoration: underline;  font-size: 15px; color: #8a8a8a; line-height: 30px;"><a
+                                href="#">고객센터 톡톡문의 카톡문의</a></li>
+                    </ul>
+                </div>
+                <div class="bank">
+                    <ul>
+                        <li><span>BANK ACCOUT</span></li>
+                    </ul>
+
+                    <ul>
+                        <li><span style="  font-size: 14px; font-weight: 300;; line-height: 25px;">농협은행:</span>
+                            <p style="  font-size: 14px; font-weight: 300; line-height: 20px;">3561573864613</p>
+                        </li>
+                        <li><span style="  font-size: 14px; font-weight: 300; line-height: 25px;">예금주:</span>
+                            <p style="  font-size: 14px; font-weight: 300; line-height: 20px;">최은표(패피상희)</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="advice">
+                <ul>
+                    <strong>안내</strong>
+                    <li><a href="#">멤버가입</a></li>
+                    <li><a href="#">이용약관</a></li>
+                    <li><a href="#">개인정보처리방침</a></li>
+                    <li><a href="#">이용안내</a></li>
+                </ul>
+                <ul>
+                    <strong>멤버혜택</strong>
+                    <li><a href="#">쿠폰</a></li>
+                    <li><a href="#">할인쿠폰</a></li>
+                </ul>
+                <ul>
+                    <strong>고객센터</strong>
+                    <li><a href="#">주문배송조회</a></li>
+                    <li><a href="#">반품정책</a></li>
+                    <li><a href="#">결제방법</a></li>
+                    <li><a href="#">공지사항</a></li>
+                    <li><a href="#">문의하기</a></li>
+                </ul>
+                <ul>
+                    <strong>회사소개</strong>
+                    <li><a href="#">소식</a></li>
+                    <li><a href="#">채용</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="word">
+            <ul>
+                <li>
+                    <span>패피상희</span>
+                    <span>법인명(상호): 패피상희/대표자(성명) : 최은표 / 사업자 등록번호 안내:[136-05-71435]/통신판매업 신고 제 2023-인천부평-1025호 <a
+                            href="#">[사업자정보확인]</a></span>
+                    <span>전화: 032296021 / 주소 : 21330 인천광역시 부평구 주부토로 236 인천테크노벨리U1센터 D동 203호 / 개인정보관리책임자 :
+                        최은표(58mansmall@gmail.com)</span>
+                    <span>Contact : ppsh118@naver.com for mare information.</span>
+                </li>
+            </ul>
+        </div>
+        <div class="fixed-toggle-wrap">
+            <button class="consult-toggle" id="consultToggle">
+                <span class="material-symbols-outlined">
+                    call
+                </span>
+            </button>
+
+            <div class="consult-box" id="consultBox">
+                <p>고객센터</p>
+                <strong><a href="tel:15880000"></a>1588-0000</strong>
+                <span>평일 09:00 - 18:00</span>
+            </div>
+
+            <button class="top-btn" id="topBtn">
+                <span class="material-symbols-outlined">
+                    vertical_align_top
+                </span>
+            </button>
+        </div>
+</body>
+
+</html>

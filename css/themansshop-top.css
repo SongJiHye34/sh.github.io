@@ -1,0 +1,929 @@
+@charset "utf-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+@font-face {
+    font-family: 'MyFont';
+    src: url('../Font/AlexandriaFLF-Bold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'korea';
+    src: url('../Font/SCDream4.otf') format('opentype');
+}
+
+body {
+    position: relative;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    font-family: 'MyFont';
+
+}
+
+/*웹페이지*/
+.warp {
+    position: relative;
+    width: 1260px;
+    margin: 0 auto;
+}
+
+.main {
+    width: 100%;
+}
+
+/*메뉴*/
+.header {
+    top: 0;
+    position: relative;
+    min-width: 1000px;
+    max-width: 1420px;
+    height: 127px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.position {
+    position: relative;
+    width: 100%;
+    height: 30px;
+}
+
+.position li {
+    width: auto;
+    height: 100%;
+}
+
+.position li a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3px 10px 3px 10px;
+    border-radius: 10px;
+    color: #222;
+    cursor: pointer;
+    transition: all 0.15s ease;
+
+}
+
+.position li a:active {
+    transform: translateY(4px);
+    box-shadow: 0 0 0 #bdbdbd;
+}
+
+.position li:hover a {
+    transform: translateY(2px);
+    box-shadow: 0 2px 0 #bdbdbd;
+    background: #ffffff;
+    color: #737373;
+}
+
+.side-menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 300px;
+    height: 100vh;
+    background: #fff;
+    transition: 0.35s ease;
+    z-index: 999;
+    padding: 50px 40px;
+    box-shadow: -4px 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.side-menu ul {
+    list-style: none;
+    padding: 0;
+}
+
+#sianup {
+    padding: 20px 0 20px 0;
+    border-bottom: 1px solid #a1a1a1;
+}
+
+#sale {
+    padding: 20px 0 20px 0;
+}
+
+.side-menu ul li {
+    padding: 5px 0 5px 0;
+}
+
+#sianup,
+#sale {
+    position: relative;
+    padding: 20px 0;
+    overflow: hidden;
+}
+
+
+
+#sianup li,
+#sale li {
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    display: block;
+}
+
+#sianup li::before,
+#sale li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 0;
+    bottom: 1px;
+    height: 1px;
+    background-color: #cbcbcb;
+    transition: width 0.35s ease;
+    z-index: -1;
+}
+
+#sianup li:hover::before,
+#sale li:hover::before {
+    width: 100%;
+}
+
+#sianup li:hover a,
+#sale li:hover a {
+    color: #737373;
+}
+
+#sianup li a,
+#sale li a {
+    position: relative;
+    z-index: 2;
+    color: #222;
+    transition: color 0.3s ease;
+}
+
+
+
+#itemList li:hover {
+    background-color: transparent;
+}
+
+.side-menu ul li a {
+    font-size: 14px;
+    color: #222;
+    text-decoration: none;
+}
+
+
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    border: none;
+    background: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+
+.side-menu.active {
+    right: 0;
+}
+
+.menu-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.search-box {
+    display: flex;
+}
+
+.search-box input {
+    width: 220px;
+    height: 40px;
+    padding: 0 12px;
+    border: 1px solid #fff;
+    background-color: #f4f4f4;
+    border-radius: 30px;
+    outline: none;
+}
+
+
+.search-box button {
+    width: 50px;
+    height: 50px;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+}
+
+.search-box button span {
+    font-size: 30px;
+
+}
+
+#itemList {
+    padding-bottom: 20px !important;
+    list-style: none;
+    padding: 0;
+    border-bottom: 1px solid #a1a1a1;
+}
+
+#itemList li {
+    line-height: 10px;
+    font-size: 13px;
+    color: #565656;
+}
+
+#itemList .item {
+    margin-top: 7px;
+    margin-bottom: 7px;
+}
+
+
+#line-2 {
+    padding-left: 100px;
+    margin-top: 5px;
+    width: 10px;
+    height: 17px;
+    border-right: #606060 2px solid;
+}
+
+
+.cart-icon {
+    position: relative;
+}
+
+#cartCount {
+    position: absolute;
+    top: -8px;
+
+    background: red;
+    color: #fff;
+    font-size: 12px;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/**/
+/*토글버튼*/
+.fixed-toggle-wrap {
+    position: fixed;
+    right: 30px;
+    bottom: 40px;
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.fixed-toggle-wrap button,
+.fixed-toggle-wrap .home-but {
+    width: 44px;
+    height: 44px;
+    border: none;
+    opacity: 0.85;
+    border-radius: 50%;
+    background-color: #fff;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.25s ease;
+    text-decoration: none;
+}
+
+.fixed-toggle-wrap button:hover,
+.fixed-toggle-wrap .home-but:hover {
+    transform: translateY(-4px);
+    background-color: #222;
+}
+
+.fixed-toggle-wrap button:hover span,
+.fixed-toggle-wrap .home-but:hover span {
+    color: #fff;
+}
+
+.fixed-toggle-wrap span {
+    font-size: 20px;
+    color: #222;
+    transition: color 0.25s ease;
+}
+
+.top-btn:active,
+.home-but:active {
+    transform: scale(0.96);
+}
+
+/*메뉴*/
+.nanb {
+    z-index: 3;
+    top: 20px;
+    height: 30px;
+    width: 1120px;
+    margin: 0 0 20px 20px;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nanb ul:last-child {
+    display: flex;
+    gap: 15px;
+}
+
+.nanb ul:last-child li:hover a span {
+    color: #a6a6a6;
+}
+
+.nanb ul li {
+    color: #606060;
+}
+
+.nanb ul li a {
+    margin-left: 20px;
+    font-family: 'MyFont', sans-serif;
+    font-size: 30px;
+}
+
+.nanb ul li span {
+    color: #606060;
+
+}
+
+.nanb.scrolled {
+    justify-content: flex-end;
+}
+
+.nanb.scrolled ul:nth-child(1) {
+    display: none;
+}
+
+
+.nanb.scrolled ul:last-child li:nth-child(1),
+.nanb.scrolled ul:last-child li:nth-child(2) {
+    display: none;
+}
+
+/*네비 모바일*/
+@media (max-width: 770px) {
+    .warp {
+        height: auto;
+
+    }
+
+    .header {
+        height: 50px !important;
+    }
+
+    .nanb {
+        position: fixed !important;
+        top: 0 !important;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 50px;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        padding: 0 16px;
+        margin: 0;
+        background: #fff;
+        z-index: 999;
+        transform: none !important;
+        transition: none !important;
+    }
+
+    .side-menu {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 320px;
+        height: 100vh;
+        z-index: 1000;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+        transition: right 0.3s ease;
+    }
+
+    .side-menu.active {
+        right: 0;
+    }
+
+    .close-btn {
+        position: absolute;
+        top: 16px;
+        right: 16px;
+        z-index: 1001;
+        border: none;
+        background: none;
+        font-size: 24px;
+        cursor: pointer;
+    }
+
+    .heart {
+        display: none;
+    }
+
+    .nanb.scrolled {
+        top: 0 !important;
+        transform: none !important;
+    }
+
+    .themans {
+        display: none;
+    }
+
+    .nanb ul {
+        margin: 0;
+        padding: 0;
+    }
+
+    .nanb ul:first-child {
+        display: none;
+    }
+
+    .nanb ul:last-child {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 12px;
+        width: 100%;
+    }
+
+}
+
+/**/
+
+
+
+.themans {
+    z-index: 3;
+    top: 75px;
+    width: 100%;
+    height: 50px;
+    position: relative;
+    border-bottom: 1px solid #606060;
+}
+
+.menu {
+    width: 1000px;
+    height: 50px;
+    margin-left: 40px;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+}
+
+.menu ul {
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: start;
+    gap: 40px;
+}
+
+.menu ul li {
+    height: 20px;
+}
+
+.menu ul li a {
+    font-family: 'korea';
+    white-space: nowrap;
+}
+
+
+
+/*상품*/
+.breadcrumb-list {
+    top: 0;
+    position: relative;
+    min-width: 1000px;
+    max-width: 1420px;
+    height: 4200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.name {
+    width: 1200px;
+    height: 70px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.name ul {
+    position: relative;
+    top: 30px;
+    left: 50px;
+}
+
+.list-number {
+    width: 100%;
+}
+
+/*정렬*/
+.sort-wrap {
+    width: 100%;
+    max-width: 1200px;
+    height: 100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.sort-box {
+    position: relative;
+}
+
+.sort-btn {
+    background: #fff;
+    border: 1px solid #ddd;
+    padding: 10px 16px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.sort-btn .arrow {
+    margin-left: 8px;
+}
+
+.sort-menu {
+    display: none;
+    position: absolute;
+    top: calc(100% + 8px);
+    right: 0;
+    width: 140px;
+    background: #fff;
+    border: 1px solid #ddd;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    z-index: 10;
+}
+
+.sort-menu.active {
+    display: block;
+}
+
+.sort-menu li {
+    padding: 12px 14px;
+    cursor: pointer;
+    border-bottom: 1px solid #eee;
+}
+
+.sort-menu li:last-child {
+    border-bottom: none;
+}
+
+.sort-menu li:hover {
+    background: #f5f5f5;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+
+
+}
+
+
+.contact-grid>.prdList-grid4.hide {
+    display: none !important;
+}
+
+/* 태블릿 */
+@media (max-width: 770px) {
+    .breadcrumb-list {
+        height: 5800px;
+    }
+
+    .list-number {
+        width: 100%;
+    }
+
+    .contact-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+        width: 400px;
+       
+    }
+
+    .contact-grid>.prdList-grid4 {
+        width: 250px;
+        min-width: 0;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    .product-item {
+        width: 200px;
+        min-width: 0;
+    }
+
+    .box {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .thumbnail {
+        width: 100%;
+        aspect-ratio: 3 / 4;
+        overflow: hidden;
+        height: 250px !important;
+    }
+
+    .thumbnail img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        display: block;
+    }
+
+    .description {
+        padding-top: 8px;
+    }
+
+    .description strong a span {
+        font-size: 12px !important;
+        line-height: 1.4;
+        word-break: keep-all;
+    }
+
+    .xans-element li span {
+        font-size: 11px !important;
+        line-height: 1.4;
+        word-break: break-word;
+    }
+}
+
+
+.product-count {
+    width: 1200px;
+    height: 40px;
+    margin-left: 10px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    position: absolute;
+    top: 90px;
+
+}
+
+.product-item {
+    width: 100%;
+}
+
+.prdList-grid4 {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.prdList-grid4 .box {
+    width: 100%;
+}
+
+.prdList-grid4 .thumbnail {
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    overflow: hidden;
+    height: 350px;
+    position: relative;
+    border-radius: 8px;
+}
+
+.prdList-grid4 .thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.prdList-grid4 .thumbnail:hover img {
+    transform: scale(1.05);
+}
+
+.prdList-grid4 .description {
+    margin-top: 12px;
+}
+
+.prdList-grid4 .name a {
+    display: block;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #111;
+}
+
+.prdList-grid4 .xans-element {
+    margin-top: 10px;
+}
+
+.prdList-grid4 .xans-element li+li {
+    margin-top: 4px;
+}
+
+.sub-text {
+    font-size: 12px;
+    color: #777;
+}
+
+.price {
+    font-size: 15px;
+    font-weight: 700;
+    color: #000;
+    margin-right: 6px;
+}
+
+.price-rate {
+    font-size: 13px;
+    font-weight: 700;
+    color: #d33;
+}
+
+
+.heart {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: auto;
+    padding: 0;
+    cursor: pointer;
+    z-index: 5;
+}
+.box {
+    position: relative;
+}
+.heart ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: block;
+}
+
+.heart ul li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.25s ease, transform 0.25s ease;
+    user-select: none;
+}
+
+
+.heart:hover ul li {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.heart ul li span {
+    display: inline-block;
+    font-size: 45px;
+    line-height: 1;
+    color: white;
+    font-variation-settings: 'FILL' 1;
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+
+
+.heart ul li.active span {
+    color: #ff4d6d;
+    transform: scale(1.2);
+}
+
+/*관련카테고리*/
+.exit {
+    width: 100%;
+    max-width: 1300px;
+    height: 130px;
+    margin: 0 auto;
+    position: relative;
+    border-bottom: 1px solid #918d8d;
+
+}
+
+.exit ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.exit ul:nth-child(1) {
+    width: 100%;
+    text-align: center;
+}
+
+.exit ul:nth-child(2) li p {
+    line-height: 30px;
+    margin-top: 30px;
+    font-size: 14px;
+    color: #918d8d;
+    font-family: 'korea';
+
+}
+
+.exit ul li p {
+    font-family: 'korea';
+}
+
+.exit ul:nth-child(3) {
+    display: flex;
+    gap: 15px;
+    padding: 3px;
+}
+
+.exit ul:nth-child(3) li {
+    font-size: 14px;
+    border: 1px solid #918d8d;
+    padding: 3px 15px 3px 15px;
+    border-radius: 15px;
+    transition: background-color 0.25s ease;
+
+}
+
+.exit ul:nth-child(3) li:hover {
+    background-color: #d7d7d7;
+}
+
+/*마지막 설명문고*/
+
+.last {
+    position: relative;
+    top: 20px;
+    height: 200px;
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.advice {
+    width: 1200px;
+    height: 170px;
+    gap: 30px;
+    margin: 0 auto;
+    display: flex;
+    position: relative;
+}
+
+.advice ul {
+    padding-left: 70px;
+    flex: 1;
+}
+
+.advice ul li {
+    margin: 5px 5px 0 0;
+    font-size: 14px;
+}
+
+.advice ul strong {
+    line-height: 40px;
+}
+
+.word {
+    width: 1200px;
+    height: 50px;
+    top: 18px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.word ul {
+    width: 1000px;
+    left: 70px;
+    position: relative;
+}
+
+.word ul li {
+
+    font-size: 12px;
+}

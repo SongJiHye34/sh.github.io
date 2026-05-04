@@ -1,0 +1,1818 @@
+@charset "utf-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+@font-face {
+    font-family: 'MyFont';
+    src: url('../Font/AlexandriaFLF-Bold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'korea';
+    src: url('../Font/SCDream4.otf') format('opentype');
+}
+
+body {
+    position: relative;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    font-family: 'MyFont';
+
+}
+
+/*웹페이지*/
+.warp {
+    position: relative;
+    width: 1260px;
+    margin: 0 auto;
+}
+
+.main {
+    width: 100%;
+}
+
+/*메뉴*/
+.header {
+    top: 0;
+    position: relative;
+    min-width: 1000px;
+    max-width: 1420px;
+    height: 127px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.position {
+    position: relative;
+    width: 100%;
+    height: 30px;
+}
+
+.position li {
+    width: auto;
+    height: 100%;
+}
+
+.position li a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3px 10px 3px 10px;
+    border-radius: 10px;
+    color: #222;
+    cursor: pointer;
+    transition: all 0.15s ease;
+
+}
+
+.position li a:active {
+    transform: translateY(4px);
+    box-shadow: 0 0 0 #bdbdbd;
+}
+
+.position li:hover a {
+    transform: translateY(2px);
+    box-shadow: 0 2px 0 #bdbdbd;
+    background: #ffffff;
+    color: #737373;
+}
+
+.side-menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 300px;
+    height: 100vh;
+    background: #fff;
+    transition: 0.35s ease;
+    z-index: 999;
+    padding: 50px 40px;
+    box-shadow: -4px 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.side-menu ul {
+    list-style: none;
+    padding: 0;
+}
+
+#sianup {
+    padding: 20px 0 20px 0;
+    border-bottom: 1px solid #a1a1a1;
+}
+
+#sale {
+    padding: 20px 0 20px 0;
+}
+
+.side-menu ul li {
+    padding: 5px 0 5px 0;
+}
+
+#sianup,
+#sale {
+    position: relative;
+    padding: 20px 0;
+    overflow: hidden;
+}
+
+
+
+#sianup li,
+#sale li {
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    display: block;
+}
+
+#sianup li::before,
+#sale li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 0;
+    bottom: 1px;
+    height: 1px;
+    background-color: #cbcbcb;
+    transition: width 0.35s ease;
+    z-index: -1;
+}
+
+#sianup li:hover::before,
+#sale li:hover::before {
+    width: 100%;
+}
+
+#sianup li:hover a,
+#sale li:hover a {
+    color: #737373;
+}
+
+#sianup li a,
+#sale li a {
+    position: relative;
+    z-index: 2;
+    color: #222;
+    transition: color 0.3s ease;
+}
+
+
+
+#itemList li:hover {
+    background-color: transparent;
+}
+
+.side-menu ul li a {
+    font-size: 14px;
+    color: #222;
+    text-decoration: none;
+}
+
+
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    border: none;
+    background: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+
+.side-menu.active {
+    right: 0;
+}
+
+.menu-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.search-box {
+    display: flex;
+}
+
+.search-box input {
+    width: 220px;
+    height: 40px;
+    padding: 0 12px;
+    border: 1px solid #fff;
+    background-color: #f4f4f4;
+    border-radius: 30px;
+    outline: none;
+}
+
+
+.search-box button {
+    width: 50px;
+    height: 50px;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+}
+
+.search-box button span {
+    font-size: 30px;
+
+}
+
+#itemList {
+    padding-bottom: 20px !important;
+    list-style: none;
+    padding: 0;
+    border-bottom: 1px solid #a1a1a1;
+}
+
+#itemList li {
+    line-height: 10px;
+    font-size: 13px;
+    color: #565656;
+}
+
+#itemList .item {
+    margin-top: 7px;
+    margin-bottom: 7px;
+}
+
+
+#line-2 {
+    padding-left: 100px;
+    margin-top: 5px;
+    width: 10px;
+    height: 17px;
+    border-right: #606060 2px solid;
+}
+
+
+.cart-icon {
+    position: relative;
+}
+
+#cartCount {
+    position: absolute;
+    top: -8px;
+
+    background: red;
+    color: #fff;
+    font-size: 12px;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/**/
+/*토글버튼*/
+.fixed-toggle-wrap {
+    position: fixed;
+    right: 30px;
+    bottom: 40px;
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.fixed-toggle-wrap button,
+.fixed-toggle-wrap .home-but {
+    width: 44px;
+    height: 44px;
+    border: none;
+    opacity: 0.85;
+    border-radius: 50%;
+    background-color: #fff;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.25s ease;
+    text-decoration: none;
+}
+
+.fixed-toggle-wrap button:hover,
+.fixed-toggle-wrap .home-but:hover {
+    transform: translateY(-4px);
+    background-color: #222;
+}
+
+.fixed-toggle-wrap button:hover span,
+.fixed-toggle-wrap .home-but:hover span {
+    color: #fff;
+}
+
+.fixed-toggle-wrap span {
+    font-size: 20px;
+    color: #222;
+    transition: color 0.25s ease;
+}
+
+.top-btn:active,
+.home-but:active {
+    transform: scale(0.96);
+}
+
+/*메뉴*/
+.nanb {
+    z-index: 3;
+    top: 20px;
+    height: 30px;
+    width: 1120px;
+    margin: 0 0 20px 20px;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nanb ul:last-child {
+    display: flex;
+    gap: 15px;
+}
+
+.nanb ul:last-child li:hover a span {
+    color: #a6a6a6;
+}
+
+.nanb ul li {
+    color: #606060;
+}
+
+.nanb ul li a {
+    margin-left: 20px;
+    font-family: 'MyFont', sans-serif;
+    font-size: 30px;
+}
+
+.nanb ul li span {
+    color: #606060;
+
+}
+
+.nanb.scrolled {
+    justify-content: flex-end;
+}
+
+.nanb.scrolled ul:nth-child(1) {
+    display: none;
+}
+
+
+.nanb.scrolled ul:last-child li:nth-child(1),
+.nanb.scrolled ul:last-child li:nth-child(2) {
+    display: none;
+}
+
+/*네비 모바일*/
+@media (max-width: 770px) {
+    .warp {
+        height: auto;
+
+    }
+
+    .header {
+        height: 50px !important;
+    }
+
+    .nanb {
+        position: fixed !important;
+        top: 0 !important;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 50px;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        padding: 0 16px;
+        margin: 0;
+        background: #fff;
+        z-index: 999;
+        transform: none !important;
+        transition: none !important;
+    }
+
+    .side-menu {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 320px;
+        height: 100vh;
+        z-index: 1000;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+        transition: right 0.3s ease;
+    }
+
+    .side-menu.active {
+        right: 0;
+    }
+
+    .close-btn {
+        position: absolute;
+        top: 16px;
+        right: 16px;
+        z-index: 1001;
+        border: none;
+        background: none;
+        font-size: 24px;
+        cursor: pointer;
+    }
+
+    .heart {
+        display: none;
+    }
+
+    .nanb.scrolled {
+        top: 0 !important;
+        transform: none !important;
+    }
+
+    .themans {
+        display: none;
+    }
+
+    .nanb ul {
+        margin: 0;
+        padding: 0;
+    }
+
+    .nanb ul:first-child {
+        display: none;
+    }
+
+    .nanb ul:last-child {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 12px;
+        width: 100%;
+    }
+
+}
+
+/**/
+
+
+
+.themans {
+    z-index: 3;
+    top: 75px;
+    width: 100%;
+    height: 50px;
+    position: relative;
+    border-bottom: 1px solid #606060;
+}
+
+.menu {
+    width: 1000px;
+    height: 50px;
+    margin-left: 40px;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+}
+
+.menu ul {
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: start;
+    gap: 40px;
+}
+
+.menu ul li {
+    height: 20px;
+}
+
+.menu ul li a {
+    font-family: 'korea';
+    white-space: nowrap;
+}
+
+.breadcrumb-list {
+    top: 0;
+    position: relative;
+    min-width: 1000px;
+    max-width: 1420px;
+    height: 200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.name {
+    width: 1200px;
+    height: 70px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.name ul {
+    position: relative;
+    top: 30px;
+    left: 50px;
+
+}
+
+.list-number {
+    width: 100%;
+}
+
+/*상품뷰어*/
+/*상품뷰어*/
+.purchase-window {
+    top: 0;
+    position: relative;
+    min-width: 1000px;
+    max-width: 1420px;
+    height: 1000px;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.left {
+    flex: 1.2;
+}
+
+.right {
+    flex: 1;
+}
+
+.viewer {
+    position: relative;
+    width: 600px;
+    margin: 0 auto;
+}
+
+.main-image {
+    width: 500px;
+    height: 600px;
+    overflow: hidden;
+    cursor: pointer;
+    margin: 0 auto;
+}
+
+.main-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* 썸네일 */
+.thumb-list {
+    margin-top: 20px;
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.thumb {
+    width: 70px;
+    height: 100px;
+    object-fit: cover;
+    cursor: pointer;
+    opacity: 0.6;
+    border: 1px solid transparent;
+    transition: all 0.2s ease;
+}
+
+.thumb:hover {
+    opacity: 1;
+}
+
+.thumb.active {
+    opacity: 1;
+    border: 1px solid #000;
+}
+
+/* 확대 보기 */
+.lightbox {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.82);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    cursor: pointer;
+}
+
+.lightbox.active {
+    display: flex;
+}
+
+.lightbox img {
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain;
+    display: block;
+}
+
+
+
+.right .code {
+    position: relative;
+    top: 0;
+    width: 100%;
+    max-width: 462px;
+    display: flex;
+
+}
+
+.code ul {
+    flex: 1;
+}
+
+.code ul:last-child {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.explanation {
+    position: relative;
+    top: 44px;
+    width: 100%;
+    height: 340px;
+    max-width: 400px;
+
+
+}
+
+.common {
+    display: flex;
+    flex-direction: column;
+    gap: 10px
+}
+
+.common ul {
+    width: 100%;
+}
+
+.common ul:nth-child(2),
+.common ul:nth-child(4),
+.common ul:nth-child(5) {
+    display: flex;
+    gap: 10px;
+}
+
+.common ul:last-child {
+    position: relative;
+    top: -8px;
+    display: flex;
+    gap: 10px;
+}
+
+#line {
+    top: 0;
+    width: 100%;
+    max-width: 462px;
+}
+
+#line li {
+    width: 100%;
+    border-bottom: 1px solid #000;
+}
+
+.cash {
+    position: relative;
+    top: 10px;
+    width: 100%;
+    max-width: 436px;
+    height: 170px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.row:nth-child(2),
+.row:nth-child(4) {
+    padding-bottom: 10px;
+    border-bottom: 1px solid #e2e2e2;
+}
+
+.cash dt {
+    font-weight: 500;
+}
+
+.cash dd {
+    margin: 0;
+}
+
+/*상품선택*/
+
+
+.product-option {
+    width: 100%;
+    max-width: 432px;
+    font-family: "Noto Sans KR", sans-serif;
+    color: #222;
+}
+
+.color-list,
+.size-list {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 15px;
+}
+
+.color-btn {
+    width: 60px;
+    height: 80px;
+    border: 1px solid #ddd;
+    background: #fff;
+    cursor: pointer;
+    padding: 0;
+}
+
+.color-btn img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.color-btn.active,
+.size-btn.active {
+    border: 2px solid #ff6a00;
+}
+
+.size-btn {
+    min-width: 50px;
+    height: 30px;
+    border: 1px solid #ddd;
+    background: #fff;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.notice {
+    color: #888;
+    margin: 5px 0 5px;
+}
+
+.warning {
+    color: #ff6a00;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.selected-product {
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.product-name {
+    font-size: 14px;
+    margin: 0 0 3px;
+}
+
+.product-option-text {
+    font-size: 14px;
+    margin: 0;
+}
+
+.selected-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.quantity-box {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+}
+
+.quantity-box button {
+    width: 20px;
+
+    border: none;
+    background: #f3f3f3;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.quantity-box input {
+    width: 20px;
+    border: none;
+    text-align: center;
+    font-size: 13px;
+    background: #fff;
+}
+
+.price-text {
+    font-size: 15px;
+    margin: 0;
+    min-width: 100px;
+    text-align: right;
+}
+
+.total-box {
+    margin-top: 5px;
+    font-size: 14px;
+}
+
+#totalPrice {
+    font-weight: 700;
+    font-size: 17px;
+    margin-left: 12px;
+}
+
+#totalQty {
+    margin-left: 8px;
+    font-size: 14px;
+}
+
+.like-box {
+    width: 50px;
+    height: 50px;
+    border: 1px solid #999;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+}
+
+.heart-icon {
+    font-size: 17px;
+    transition: 0.2s;
+}
+
+.like-count {
+    font-size: 14px;
+    margin-top: 4px;
+}
+
+/* 좋아요 상태 */
+.like-box.active .heart-icon {
+    color: red;
+}
+
+/**/
+.out {
+    padding: 15px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.keeping {
+    height: 50px;
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+    background-color: #222;
+    border: 1px solid #222;
+}
+
+.keeping ul {
+    height: 100%;
+}
+
+.keeping ul li {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.keeping a:active {
+    transform: scale(0.95);
+}
+
+.confirmed {
+    height: 50px;
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+    border: 1px solid #999;
+}
+
+
+/*a 콘텐츠창*/
+.a-content {
+    position: relative;
+    top: 0;
+    min-width: 1000px;
+    max-width: 1420px;
+    margin: 0 auto;
+}
+
+.detail-tab-wrap {
+    width: 100%;
+    max-width: 1070px;
+    margin: 0 auto;
+    border-bottom: 1px solid #222;
+}
+
+.detail-tabs {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0;
+    list-style: none;
+    display: flex;
+}
+
+.detail-tabs .tab {
+    flex: 1;
+    text-align: center;
+    position: relative;
+}
+
+.detail-tabs .tab button {
+    width: 100%;
+    margin: 0;
+    padding: 18px 0;
+    background: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 15px;
+    color: #777;
+    box-sizing: border-box;
+}
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+.detail-tabs .tab.active button {
+    color: #111;
+    border: 1px solid #222;
+    border-bottom: 1px solid #fff;
+    position: relative;
+    top: 1px;
+    z-index: 2;
+}
+
+.tab-contents {
+    position: relative;
+    top: 0;
+    min-width: 1000px;
+    width: 100%;
+    max-width: 1070px;
+    margin: 0 auto;
+    display: block;
+}
+
+.tab-content .title {
+    margin: 50px 0 20px 20px;
+}
+
+.side-list {
+    justify-content: center;
+    display: flex;
+    gap: 30px;
+    background-color: #fff;
+    box-shadow: 0 8px 15px rgba(0,0,0,0.15);
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.side-box {
+    width: 125px;
+    height: 220px;
+    flex-shrink: 0;
+}
+
+.tiny-i {
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    overflow: hidden;
+}
+
+.tiny-i li {
+    width: 100%;
+    height: 100%;
+}
+
+.tiny-i li a {
+    display: block;
+    width: 100%;
+    height: 100%;
+
+}
+
+.tiny-i li:hover a img {
+    opacity: 50%;
+}
+
+.tiny-i li a img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    transition: opacity 0.3s ease;
+    object-fit: cover;
+}
+/*리뷰창*/
+/* =========================
+   1. review 전체 영역
+========================= */
+.review {
+    top: 70px;
+    width: 100%;
+    max-width: 1300px;
+    height: 2060px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.review-title {
+    width: 100%;
+    display: block;
+}
+
+/* =========================
+   2. review 공통
+========================= */
+.review-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+}
+
+.grade-star {
+    display: flex;
+    gap: 5px;
+    margin: 20px 0 20px 10px;
+}
+
+.review-grade {
+    display: flex;
+}
+
+/* =========================
+   3. talking-list / talking
+========================= */
+.talking-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.talking {
+    border: 1px solid #ddd;
+    padding: 16px;
+    background: #fff;
+}
+
+/* 상단 정렬 */
+.review-top {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.top-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+/* 버튼 */
+.toggle-btn {
+    border: 1px solid #ddd;
+    background: #fff;
+    padding: 6px 10px;
+    cursor: pointer;
+    display: flex;
+    margin-left: -130px;
+    white-space: nowrap;
+}
+
+/* 내용 (닫힘 상태) */
+.review-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    margin-top: 0;
+    line-height: 1.6;
+}
+
+.talking.active .review-content {
+    max-height: 300px;
+    margin-top: 12px;
+}
+
+.talking.active .toggle-btn {
+    background: #222;
+    color: #fff;
+}
+
+/* =========================
+   4. review-stats
+========================= */
+.review-stats {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 10px 30px;
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    box-sizing: border-box;
+}
+
+.stat-group {
+    flex: 1;
+}
+
+.stat-group h3 {
+    margin: 0 0 15px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #7b8794;
+}
+
+.stat-row {
+    display: grid;
+    grid-template-columns: 80px 1fr 50px;
+    align-items: center;
+    column-gap: 1px;
+    margin-bottom: 8px;
+}
+
+.label {
+    font-size: 14px;
+    color: #000;
+}
+
+.percent {
+    font-size: 14px;
+    color: #000;
+    text-align: right;
+}
+
+.bar {
+    width: 100%;
+    height: 6px;
+    background: #d9d9d9;
+    border-radius: 999px;
+    overflow: hidden;
+}
+
+.fill {
+    height: 100%;
+    background: #000;
+    border-radius: 999px;
+}
+
+.fill.light {
+    background: #b7b7b7;
+}
+
+@media (max-width: 900px) {
+    .review-stats {
+        flex-direction: column;
+        gap: 35px;
+    }
+}
+
+/* =========================
+   5. feedback
+========================= */
+.feedback {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    gap: 6px;
+    flex: 5;
+    overflow: visible;
+    width: 500px;
+}
+
+.feedback ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+}
+
+.feedback ul li p {
+    font-size: 14px;
+    line-height: 22px;
+    vertical-align: top;
+    color: #777;
+}
+
+.feedback ul:nth-child(1) li {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.feedback ul:nth-child(1) li:nth-child(2) {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.feedback ul:nth-child(2) {
+    justify-content: flex-start;
+    gap: 10px;
+}
+
+.feedback ul:nth-child(3) img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+}
+
+.feedback ul:nth-child(4) {
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+/* =========================
+   6. review-img
+========================= */
+.review-img {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    background: #fff;
+}
+
+.review-box,
+.review-box ul li {
+    width: 125px;
+    height: 125px;
+}
+
+.review-img div:last-child {
+    position: relative;
+}
+
+.review-img div:last-child::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.5);
+}
+
+.review-box dl {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    color: #fff;
+}
+
+.review-box ul {
+    overflow: hidden;
+}
+
+.review-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* =========================
+   7. sort buttons
+========================= */
+.sort-btns {
+    display: flex;
+    margin: 13px;
+}
+
+.sort-btns button {
+    text-align: center;
+    padding: 0 11px 0 11px;
+    border: none;
+    background: #fff;
+    color: #969393;
+    cursor: pointer;
+}
+
+.sort-btns button:nth-child(1),
+.sort-btns button:nth-child(2),
+.sort-btns button:nth-child(3) {
+    border-right: 1px solid #bfbfbf;
+}
+
+.sort-btns button:nth-child(4) {
+    display: flex;
+    justify-content: center;
+    gap: 3px;
+}
+
+.sort-btns button.active {
+    color: #000;
+    font-weight: 600;
+}
+
+/* =========================
+   8. talking-list 하단 재정의
+========================= */
+.talking-list {
+    margin-top: 10px;
+    display: block;
+    position: relative;
+}
+
+.talking {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #ddd;
+}
+
+.talking:nth-child(1) {
+    border-top: 2px solid #000;
+}
+
+/* =========================
+   9. pagination
+========================= */
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 14px;
+    margin-top: 10px;
+}
+
+.page-btn {
+    border: none;
+    background: none;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.page-btn:disabled {
+    opacity: 0.3;
+    cursor: default;
+}
+/*상품 상세정보칸*/
+.about {
+    width: 100%;
+    top: 40px;
+    position: relative;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.about ul {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.border-line {
+    border-bottom: 1px solid #e5e5e5;
+}
+
+
+.box1-row{
+    display: flex;
+    width: 100%;
+    position: relative;
+}
+
+
+
+.box1-row div:nth-child(1){
+    flex: 1;
+
+     
+}
+.Score{
+    flex: 1;
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.Score ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    width: 100%;
+}
+
+
+
+.translation {
+    position: relative;
+    top: 0;
+    min-width: 1000px;
+    width: 100%;
+    max-width: 1070px;
+    height: 12000px;
+    margin: 0 auto;
+}
+
+.translation ul li {
+    display: block;
+    width: 100%;
+    max-width: 1200px;
+    height: 100%;
+    overflow: hidden;
+}
+
+.translation ul li img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.translation ul li:nth-child(12) {
+
+    width: 100%;
+    text-align: center;
+}
+
+.translation ul li:nth-child(12) img {
+    width: 700px;
+    object-fit: cover;
+}
+
+.qna {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+.qna tr {
+    border-bottom: 1px solid #ddd;
+}
+
+.qna td {
+    padding: 20px 12px;
+    vertical-align: middle;
+}
+.qna td:first-child {
+    width: 98px;
+    position: relative;
+    transform: translateY(7%);
+}
+
+
+.qna td:nth-child(2) .tit{
+    width: 600px;
+    float: left;
+    margin: 0;
+}
+.qna td:nth-child(2) .user-id{
+    margin: 0;
+    margin-left: auto; 
+    text-align: right;
+}
+.qna td:last-child {
+    width: 115px;
+    text-align: right;
+    color: #777;
+    font-size: 14px;
+}
+/**/
+
+
+/*=======================
+     [Q&A] 질문 응답
+========================*/
+
+.qa-contents{
+  top: 70px;
+  width: 100%;
+  max-width: 1300px;
+  height: 650px;
+  margin: 0 auto;
+  position: relative;
+}
+.qa-contents .fr{
+   width: 100%;
+   text-align: right;
+   display: block;
+}
+.qa-contents .fr button{
+    padding:  10px 20px;
+    background-color: #222;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+.qa-contents .fr  button:hover{
+    background-color: #989898;
+    border: 2px solid #989898;
+}
+.qa-contents .qa-list{
+    width: 100%;
+}
+
+
+.qa-list {
+    display: block;
+}
+
+.pagination2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    margin-top: 30px;
+}
+
+.pagination2 .page-btn {
+    width: 36px;
+    height: 36px;
+    border: 1px solid #ddd;
+    background: #fff;
+    cursor: pointer;
+}
+
+.pagination2 .page-btn:disabled {
+    opacity: 0.4;
+    cursor: default;
+}
+.page-info2 {
+    font-size: 14px;
+    color: #666;
+}
+
+/**/
+/*이미지 하단 상품고지서*/
+.pointer {
+    position: relative;
+    top: 20px;
+    min-width: 1000px;
+    width: 100%;
+
+    max-width: 1070px;
+    margin: 0 auto;
+    height: auto;
+}
+.pointer ul{
+    width: 100%;
+    margin: 0 auto;
+}
+.notation {
+    width: 100%;
+ align-items: center;
+    border-bottom: 1px solid #ddd;
+}
+.material-symbols-outlined {
+    position: relative;
+    top: 5px;
+}
+.notation-title {
+    width: 100%;
+    padding: 20px;
+    background-color: transparent;
+    border: none;
+    text-align: left;
+     align-items: center;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.notation-content {
+    width: 100%;
+    margin: 0 auto;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+}
+
+.notation-content dl{
+    width: 100%;
+    position: relative;
+}
+.notation-content dl p{
+    font-size: 13px;
+    position: relative;
+    margin-bottom: 7px;
+   margin-left: 12px;
+    line-height: 18px;
+    width: fit-content;
+}
+.notation-content dt,
+.notation-content dd {
+    width: 100%;
+    padding: 15px;
+    font-size: 15px;
+    line-height: 1.6;
+    letter-spacing: 1.4px;
+}
+
+/**/
+/*반품AS*/
+.return{
+       position: relative;
+    top: 20px;
+    min-width: 1000px;
+    width: 100%;
+    max-width: 1070px;
+    margin: 0 auto;
+    height: auto; 
+}
+.return dl{
+  width: 100%;
+    border-bottom: 1px solid #ddd;
+}
+.return dl dt{
+   font-size: 18px;
+   font-weight: 500;
+   margin-bottom: 3px;  
+}
+.return dl dd{
+    font-size: 14px;
+}
+.data{
+ display: flex; gap: 30px;
+  border-bottom: 1px solid #ddd;
+}
+
+.data ul:nth-child(1){
+    flex: 0.3; 
+    display: flex;              
+    justify-content: center;  
+    text-align: center; 
+    align-items: center;   
+    background-color: #fafafa;
+    border-right:1px solid #ddd;
+}
+
+.data ul:nth-child(1) li P{
+    font-size: 16px;
+    color: #4e4d4d;
+    font-weight: 500;
+}
+.data ul:nth-child(2) li{
+    font-size: 13px;
+    color: #333;
+    line-height: 18px;
+    position: relative;
+    padding-left: 10px;
+    margin-bottom: 8px;
+}
+.data ul:last-child{
+    flex: 1;
+    margin: 20px 200px 20px 0;
+}
+/**/
+/*관련카테고리*/
+.exit {
+    top: 70px;
+    width: 100%;
+    max-width: 1300px;
+    height: 130px;
+    margin: 0 auto;
+    position: relative;
+    border-bottom: 1px solid #918d8d;
+
+}
+
+.exit ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.exit ul:nth-child(1) {
+    width: 100%;
+    text-align: center;
+}
+
+.exit ul:nth-child(2) li p {
+    line-height: 30px;
+    margin-top: 30px;
+    font-size: 14px;
+    color: #918d8d;
+    font-family: 'korea';
+
+}
+
+.exit ul li p {
+    font-family: 'korea';
+}
+
+.exit ul:nth-child(3) {
+    display: flex;
+    gap: 15px;
+    padding: 3px;
+}
+
+.exit ul:nth-child(3) li {
+    font-size: 14px;
+    border: 1px solid #918d8d;
+    padding: 3px 15px 3px 15px;
+    border-radius: 15px;
+    transition: background-color 0.25s ease;
+
+}
+
+.exit ul:nth-child(3) li:hover {
+    background-color: #d7d7d7;
+}
+.hide {
+  display: none !important;
+}
+
+/*마지막 설명문고*/
+
+.order {
+    position: relative;
+    top: 90px;
+    height: 200px;
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.advice {
+    width: 1200px;
+    height: 170px;
+    gap: 30px;
+    margin: 0 auto;
+    display: flex;
+    position: relative;
+}
+
+.advice ul {
+    padding-left: 70px;
+    flex: 1;
+}
+
+.advice ul li {
+    margin: 5px 5px 0 0;
+    font-size: 14px;
+}
+
+.advice ul strong {
+    line-height: 40px;
+}
+
+.word {
+    width: 1200px;
+    height: 50px;
+     top: 90px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.word ul {
+    width: 1000px;
+    left: 70px;
+    position: relative;
+}
+
+.word ul li {
+
+    font-size: 12px;
+}
