@@ -1460,3 +1460,265 @@ body {
 .word ul li {
   font-size: 12px;
 }
+
+
+
+
+/*
+
+
+반응형 모바일
+
+
+*/
+
+@media (max-width: 770px) {
+  .wrap {
+    width: 100vh !important;
+  }
+
+  #line-2 {
+    padding-left: 5px !important;
+  }
+
+  .list a {
+    font-size: 16px;
+
+  }
+
+  .menu ul {
+    display: flex;
+    gap: 20px !important;
+  }
+
+  .top-banner {
+    position: relative;
+  }
+
+  .logo {
+    position: absolute;
+    top: 50%;
+    left: 45% !important;
+    transform: translate(-50%, -50%);
+  }
+
+  .a-item {
+    width: 100vh !important;
+    height: auto !important;
+    margin: 0 !important;
+  }
+
+  .a-banner {
+    width: 100% !important;
+    position: relative;
+  }
+
+  .swiper-scrollbar {
+    display: none !important;
+  }
+
+  .content {
+    height: auto !important;
+  }
+
+  .a-banner ul {
+    position: absolute;
+    top: 80%;
+    left: 45% !important;
+    transform: translate(-50%, -50%);
+  }
+
+  .a-banner ul li span:nth-child(1) {
+    font-size: 22px !important;
+  }
+ .A-next,
+ .B-next,
+ .C-next{
+  right: 270px !important;
+ }
+ .material-symbols-outlined{
+  display: none !important;
+ }
+  .a-banner ul li span:last-child {
+    font-size: 12px !important;
+  }
+
+  .a-title,
+  .d-title,
+  .c-title {
+    width: 770px !important;
+    text-align: left;
+  }
+
+  .b-item {
+    width: 100vh !important;
+    height: 950px !important;
+    position: relative !important;
+
+  }
+
+  .high ul {
+    left: 10px !important;
+  }
+
+  .high ul li h3 {
+    font-size: 15px !important;
+  }
+ 
+  .mainpage {
+    width: 100vh !important;
+    height: 400px !important;
+  }
+
+  .wrapimg {
+    width: 80vh !important;
+    height: auto !important;
+  }
+.c-title  ul li h3,
+.d-title ul li h3{
+  font-size: 15px !important;
+}
+.c-title ul,
+.d-title ul{
+  left: 10px !important;
+}
+  .Guide {
+    height: auto !important;
+    width: 700px !important;
+    margin: 1px !important;
+    top: 0 !important;
+  }
+
+  .going {
+    width: 700px !important;
+    margin: 20px !important;
+
+  }
+
+  .sub-track {
+    left: 20px !important;
+  }
+
+  .sub-slide>div {
+    width: 200px !important;
+  }
+
+  .going ul li span,
+  a {
+    font-size: 12px !important;
+  }
+
+  .bnr2 {
+    width: 80vh !important;
+
+  }
+
+  .bnr2 .next {
+    right: 60px !important;
+  }
+
+  .bnr2-btn {
+    font-size: 17px !important;
+    width: 30px !important;
+    height: 30px !important;
+  }
+
+  .bnr2-slide img {
+    width: 300px !important;
+    height: 330px !important;
+
+  }
+
+  .c-item {
+    width: 100vh !important;
+    height: auto !important;
+  }
+
+  .c-item .core {
+    display: block;
+    width: 100vh !important;
+  }
+.c-item .core .channel {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  max-width: 700px;
+  margin: 30px;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+}
+.popupbar{
+    height: 170px !important;
+}
+.popupmenu{
+  width: 730px !important;
+  margin: 10px !important;
+}
+.popupmenu ul li p{
+  font-size: 13px !important;
+}
+  .bigimg{
+    width: 100% !important;
+  }
+    .bigimg ul {
+      padding-left: 0 !important;
+    }
+  .bigimg ul li {
+    width: 600px !important;
+    margin: 0 auto;
+  }
+.d-item{
+  width: 100vh !important;
+  height: 500px !important
+}
+
+  .card img {
+    height: 300px !important;
+  }
+
+  .card ul li a span {
+    font-size: 12px !important;
+    padding-left: 0 !important;
+  }
+.c-title ul li:nth-child(2) img{
+  display: none;
+}
+  .card>a {
+    font-size: 13px !important;
+  }
+
+  .card ul li a {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .swiper-slide {
+    width: 200px !important;
+  }
+  .last{
+    height: 900px !important;
+  }
+  .Assist{
+    width: 770px !important;
+    margin: 0 !important;
+  }
+  .connector{
+    width: 700px !important;
+  }
+    .connector>div ul{
+      width: 300px;
+    }
+ .number ul li,
+ .bank ul li{
+  font-size: 12px;
+ }
+  .advice{
+    gap: 0 !important;
+    margin: 0 !important;
+    width: 770px !important;
+  }
+    .advice ul{
+      padding-left: 40px !important;
+    }
+}
