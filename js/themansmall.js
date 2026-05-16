@@ -319,5 +319,34 @@ $(document).ready(function () {
             }, 1000);
         });
     });
+let productSwiperA;
 
+function handleSwiper() {
+
+
+  if (window.innerWidth > 360) {
+
+    if (!productSwiperA) {
+      productSwiperA = new Swiper(".productSwiperA", {
+        slidesPerView: 1,
+        spaceBetween: 20,
+      });
+    }
+
+  }
+
+  else {
+
+    if (productSwiperA) {
+      productSwiperA.destroy(true, true);
+      productSwiperA = undefined;
+    }
+
+  }
+
+}
+
+handleSwiper();
+
+window.addEventListener("resize", handleSwiper);
 });
